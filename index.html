@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Outil Infra IT - Full Cloud</title>
+  <link rel="stylesheet" href="./src/styles.css" />
+</head>
+<body>
+  <header class="app-header">
+    <div>
+      <h1>Gestion Infrastructure IT - Full Cloud</h1>
+      <p class="header-subtitle">Base cloud, cartographie autonome, zero dependance locale.</p>
+    </div>
+    <div class="header-actions">
+      <button id="btnTheme" class="btn btn-soft" type="button">Mode sombre</button>
+      <button id="btnExportHtml" class="btn btn-success" type="button">Exporter la cartographie HTML</button>
+    </div>
+  </header>
+
+  <nav class="tabs" role="tablist" aria-label="Sections">
+    <button class="tab is-active" data-tab="equipements">Equipements</button>
+    <button class="tab" data-tab="topologie">Topologie Reseau</button>
+    <button class="tab" data-tab="statistiques">Statistiques</button>
+    <button class="tab" data-tab="guide">Guide d'utilisation</button>
+  </nav>
+
+  <main>
+    <div class="status-row">
+      <span id="syncStatus" class="badge badge-warn">Chargement...</span>
+      <span class="muted">Sauvegarde cloud automatique active</span>
+    </div>
+    <section id="tab-equipements" class="tab-panel is-active"></section>
+    <section id="tab-topologie" class="tab-panel"></section>
+    <section id="tab-statistiques" class="tab-panel"></section>
+    <section id="tab-guide" class="tab-panel"></section>
+  </main>
+
+  <script type="module" src="./src/main.js"></script>
+</body>
+</html>
